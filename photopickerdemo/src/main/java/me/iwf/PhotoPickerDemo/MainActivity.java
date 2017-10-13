@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Fabric.with(this, new Crashlytics());
     setContentView(R.layout.activity_main);
 
-    RecyclerView recyclerView = findViewById(R.id.recycler_view);
+    RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
     photoAdapter = new PhotoAdapter(this, selectedPhotos);
 
     recyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, OrientationHelper.VERTICAL));
